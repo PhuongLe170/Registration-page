@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img src="img/kms-software.svg" alt="Logo Company" class="brand-logo" >
+    </div>
+    <div class="navbar-image">
+        <img src="img/vector.svg" alt="ellipse logo" class="nav-graphic top-right-svg">
+    </div>
+</nav>
+
+<section id="topic" class="text-white py-5">
+    <div class="container-fluid position-relative">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="topic-image">
+                    <img src="img/registration.png" class="img-fluid topic-image-center" alt="Topic Image">
+                </div>
+            </div>
+            <div class="col-md-4 text-content">
+                <h2 class="text-warning headline-secondary">Sip. Chat. And Share.</h2>
+                <h1 class="headline-primary">Harnessing Generative AI for Coding: Github CopilotX and Langchain Explored</h1>
+                <a id="registrationBtn" href="#registration" class="btn btn-light btn-lg rounded-pill mt-4">Register Now</a>
+            </div>
+        </div>
+        <div class="custom-graphic">
+            <img src="img/ellipse.svg" alt="Ellipse Logo">
+            <img src="img/techcafe.svg" alt="Tech Cafe Logo">
+        </div>
+        <div class="event-info row">
+            <div class="col-md-6 text-center ">
+                <span class="event-time">9 am - 12 pm | September 30, 2023</span>
+            </div>
+            <div class="col-md-6">
+                <span class="event-location">KMS HCMC, 2 Tan Vien, W.2., Tan Binh</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="speaker" class="py-5">
+    <div class="container text-center">
+        <p class="titles-second">Take a sip and</p>
+        <h2 class="title-primary">Meet our speakers</h2>
+
+        <div class="speakers d-flex justify-content-start my-4 py-5">
+            <!-- Speaker 1 -->
+            <div class="speaker-card mr-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img class="speaker-image rounded-circle mr-3" src="img/speaker.png" alt="Speaker Image">
+                    <div class="author">
+                        <h5 class="font-weight-bold">Khoa Nguyen</h5>
+                        <p class="font-italic ">Principal Software Engineer</p>
+                    </div>
+                </div>
+                <p>Brings 15 years of software development experience, with a focus on .NET, NodeJs, and React. His passion for research and the application of generative AI to support and accelerate the development process will leave you motivated to explore new possibilities.</p>
+            </div>
+
+            <!-- Speaker 2 -->
+            <div class="speaker-card">
+                <div class="d-flex align-items-center mb-3">
+                    <img class="speaker-image rounded-circle mr-3"  src="img/speaker.png" alt="Speaker Image">
+                    <div class="author">
+                        <h5 class="font-weight-bold ">Hieu Trinh</h5>
+                        <p class="font-italic">Principal Software Engineer</p>
+                    </div>
+                </div>
+                <p>With 10 years of experience in software development, he has been a technical leader for significant projects at KMS. His extensive tech stack knowledge combined with his personal interest in building LLM applications, will provide invaluable insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="registration" class="py-5">
+    <div class="container">
+        <h2 class="text-center text-title">Join Us in Making a Cozy Blend <br/>of Tech-and-Coffee.</h2>
+        <p class="text-center text-registration">We assure that your information will be handled with the <br/>utmost care and treated as confidential.</p>
+
+        <!-- Registration Form -->
+        <form class="mt-5" id="registrationForm">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="kmser">Are you a KMSer?</label>
+                        <select class="custom-select d-block w-100" id="kmser" required>
+                            <option value="">Select one</option>
+                            <option>Yes, I'm</option>
+                            <option>I'm an ex-KMSer</option>
+                            <option>No, I'm not</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Type here" pattern="^\d{10}$">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Type here"  required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="year">Year(s) Of Experience</label>
+                        <select class="custom-select d-block w-100" id="year">
+                            <option value="">Select one</option>
+                            <option>Under 1 year</option>
+                            <option>From 1 to 3 years</option>
+                            <option>From 3 to 5 years</option>
+                            <option>From 5 to 8 years</option>
+                            <option>More than 8 years</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Type here"  required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="haveAI">Do You Have Experience Working with CopilotX & Langchain LLM?</label>
+                        <select class="custom-select d-block w-100" id="haveAI" required>
+                            <option value="">Select one</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="question">Any Questions To Organizers?</label>
+                <input type="text" class="form-control" id="question" placeholder="Type here">
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn custom-btn btn-primary">
+                    Submit
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+</section>
+<!-- Slider Section -->
+<section id="slider">
+    <div class="container">
+        <div id="carouselSlides" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carouselSlides" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselSlides" data-slide-to="1"></li>
+                <li data-target="#carouselSlides" data-slide-to="2"></li>
+                <li data-target="#carouselSlides" data-slide-to="3"></li>
+                <li data-target="#carouselSlides" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="5000">
+                    <img src="img/image1.png" class="d-block w-100" alt="Slide 1">
+
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="img/image2.png" class="d-block w-100" alt="Slide 2">
+
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="img/image3.png" class="d-block w-100" alt="Slide 3">
+
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="img/image4.png" class="d-block w-100" alt="Slide 4">
+
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="img/image5.png" class="d-block w-100" alt="Slide 5">
+
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#carouselSlides" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselSlides" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <p>You've successfully registered.</p>
+        <img src="img/check-circle.svg" alt="check circle">
+    </div>
+</div>
+
+<footer class="text-muted text-left py-3">
+    <div class="container">
+        <div class="d-flex">
+            <!-- Updated Column 1 based on your design using Bootstrap -->
+            <div class="flex-fill">
+                <h6 class="text-muted font-weight-bold text-uppercase">Solutions</h6>
+                <ul class="list-unstyled">
+                    <li>Application Transformation</li>
+                    <li>Cloud Migration</li>
+                    <li>Mobile Development</li>
+                    <li>New Software Creation</li>
+                    <li>Quality Assurance</li>
+                    <li>Software Engineering</li>
+                    <li>DevOps</li>
+                </ul>
+            </div>
+
+            <!-- Rest of the columns -->
+            <div class="flex-fill">
+                <h6></h6>
+                <ul class="list-unstyled mt-4">
+                    <li>Consulting Services</li>
+                    <li>Automation</li>
+                    <li>BI & Analytics</li>
+                    <li>Integration Services</li>
+                    <li>Support Services</li>
+                    <li>Katalon Solutions</li>
+                    <li>Kobiton Mobile Testing</li>
+                </ul>
+            </div>
+            <div class="flex-fill">
+                <h6 class="text-muted font-weight-bold text-uppercase ">Resources</h6>
+                <ul class="list-unstyled">
+                    <li>Blog</li>
+                    <li>Press</li>
+                    <li>Success Stories</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Conditions</li>
+                </ul>
+            </div>
+            <div class="flex-fill">
+                <h6 class="text-muted font-weight-bold text-uppercase">Company</h6>
+                <ul class="list-unstyled">
+                    <li>About</li>
+                    <li>Careers - U.S.</li>
+                    <li>Careers - Vietnam</li>
+                    <li>KMS Gives</li>
+                    <li>Leadership</li>
+                    <li>Why Vietnam</li>
+                </ul>
+            </div>
+            <div class="flex-fill">
+                <h6 class="text-muted font-weight-bold text-uppercase ">KMS Companies</h6>
+                <ul class="list-unstyled">
+                    <li>Katalon Studio</li>
+                    <li>KMS Solutions</li>
+                    <li>Kobiton</li>
+                    <li>QASymphony</li>
+                    <li>Sprynk</li>
+                    <li>Grove</li>
+                    <li>KMS Labs</li>
+                </ul>
+            </div>
+        </div>
+        <!-- New row for company info and social icons -->
+        <div class="row mt-4 align-items-center">
+            <!-- Company logo and copyright text -->
+            <div class="col-md-6 d-flex align-items-center">
+                <img src="img/logo.png" alt="KMS Technology Logo" width="120" class="mr-3"> <!-- Adjust width as needed -->
+                <p class="mb-0">© 2021 KMS Technology. All Rights Reserved.</p>
+            </div>
+
+            <!-- Social icons -->
+            <div class="col-md-6 text-right">
+                <a href="https://www.facebook.com/kmstechnology" class="mr-2">
+                    <img src="img/facebook.svg" alt="Facebook" width="8">
+                </a>
+                <a href="https://twitter.com/kmstechnology" class="mr-2">
+                    <img src="img/twitter.svg" alt="Twitter" width="15">
+                </a>
+                <a href="https://www.linkedin.com/company/kms-technology/" class="mr-2">
+                    <img src="img/linkedIn.svg" alt="LinkedIn" width="15">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
