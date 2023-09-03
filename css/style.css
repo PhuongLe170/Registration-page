@@ -6,6 +6,7 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .navbar, #topic {
@@ -135,7 +136,7 @@ body {
 }
 .title-primary {
     color: #0095FF;
-    font-family: Roboto, serif;
+
     font-size: 51px;
     line-height: 57px; /* 111.765% */
     letter-spacing: 0.2px;
@@ -175,7 +176,7 @@ body {
 
 #registration .text-title{
     color: #0095FF;
-    font-family: Roboto, serif;
+    /*font-family: Roboto, serif;*/
     font-weight: 400
 }
 #registration .text-registration {
@@ -201,7 +202,7 @@ form input:focus, form select:focus {
     background-color: #38A3F1;
     color: white;
     font-size: 20px;
-    font-family: 'Lato', sans-serif;
+    /*font-family: 'Lato', sans-serif;*/
     font-weight: 600;
     padding: 10px 60px;
     border-radius: 35px;
@@ -229,7 +230,7 @@ form .btn:hover {
     flex-direction: row;
     justify-content: center;
     width: 300px;
-    padding: 16px 0px;
+    padding: 16px 0;
     border-radius: 35px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     color: #75D610;
@@ -284,7 +285,7 @@ footer li:hover {
 }
 footer {
     padding: 20px 0;
-    font-family: 'Lato', sans-serif;
+    /*font-family: 'Lato', sans-serif;*/
 }
 footer a:focus, footer a:hover, footer a:active {
     outline: none;
@@ -308,202 +309,5 @@ footer a:hover img, footer a:active img {
 }
 
 
-/* Medium devices (tablets, 601px and up) */
-@media only screen and (min-width: 601px) and (max-width: 992px) {
-    /* Adjustments for tablet screens */
-
-    body {
-        font-size: 16px; /* Adjusting base font size */
-    }
-
-    .navbar {
-        padding: 20px 30px;
-    }
-
-    .navbar .navbar-brand {
-        padding: 25px 0 0 25px;
-    }
-
-    .navbar-brand .brand-logo {
-        max-height: 50px;
-    }
-
-    #topic {
-        padding: 40px 0;
-    }
-
-    #topic h1 {
-        font-size: 2.5em;
-    }
-
-    #topic h2 {
-        font-size: 1.8em;
-    }
-
-    .topic-image-center {
-        width: 70%;
-        transform: translateY(-30px); /* slight adjust */
-    }
-
-    .text-content {
-        padding: 0 20px;
-        transform: translateY(-60px); /* adjusting for medium screens */
-    }
-
-    .custom-graphic {
-        bottom: -0.5em; /* adjust positioning for graphic on tablet screens */
-        right: 4em;
-        width: 10em;
-        height: 10em;
-    }
-
-    .speaker-card {
-        padding: 20px 0;
-    }
-
-    .speaker-card .speaker-image {
-        width: 85px;
-        height: 85px;
-    }
-
-    #registration {
-        padding: 30px 0;
-    }
-
-    #registration .text-title {
-        font-size: 1.5em;
-    }
-
-    form input, form select {
-        width: 48%; /* allowing two elements in one line */
-        margin-right: 2%;
-    }
-
-    .custom-btn {
-        font-size: 20px;
-        padding: 12px 50px;
-    }
-}
 
 
-
-/* iPhone styles */
-@media only screen and (max-width: 414px) { /* iPhone X và các mô hình tương tự */
-    /* Adjustments for smaller screens */
-
-    body {
-        font-size: 14px; /* Adjusting base font size */
-    }
-
-    .navbar .navbar-brand {
-        padding: 20px 0 0 20px;
-    }
-
-    .navbar-brand .brand-logo {
-        max-height: 40px;
-    }
-
-    #topic h1, #topic h2 {
-        font-size: 1.5em;
-    }
-
-    .topic-image-center {
-        width: 90%;
-    }
-
-    .text-content {
-        padding: 0 10px;
-        transform: translateY(0);
-    }
-
-    .custom-graphic {
-        display: none; /* Consider hiding complex graphics for very small screens for clarity */
-    }
-
-    .speaker-card {
-        padding: 10px 0;
-    }
-
-    .speaker-card .speaker-image {
-        width: 70px;
-        height: 70px;
-    }
-
-    #registration {
-        padding: 20px 0;
-    }
-
-    #registration .text-title {
-        font-size: 1.2em;
-    }
-
-    form input, form select {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .custom-btn {
-        font-size: 18px;
-        padding: 10px 40px;
-    }
-}
-
-/* iPad styles */
-@media only screen and (min-width: 415px) and (max-width: 1024px) {
-    /* Adjustments for tablet screens */
-
-    body {
-        font-size: 16px; /* Adjusting base font size */
-    }
-
-    .navbar {
-        padding: 20px 30px;
-    }
-
-    .navbar .navbar-brand {
-        padding: 25px 0 0 25px;
-    }
-
-    .navbar-brand .brand-logo {
-        max-height: 50px;
-    }
-
-    #topic {
-        padding: 40px 0;
-    }
-
-    #topic h1 {
-        font-size: 2.5em;
-    }
-
-    #topic h2 {
-        font-size: 1.8em;
-    }
-
-    .topic-image-center {
-        width: 70%;
-    }
-
-    .speaker-card .speaker-image {
-        width: 100px;
-        height: 100px;
-    }
-
-    #registration {
-        padding: 30px 0;
-    }
-
-    #registration .text-title {
-        font-size: 1.5em;
-    }
-
-    form input, form select {
-        width: 48%; /* allowing two elements in one line */
-        margin-right: 2%;
-    }
-
-    .custom-btn {
-        font-size: 20px;
-        padding: 12px 50px;
-    }
-}
