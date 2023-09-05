@@ -21,7 +21,7 @@ function smoothScroll(target, duration) {
     requestAnimationFrame(animation);
 }
 
-document.querySelectorAll(':not(.carousel) > a').forEach(link => {
+document.querySelectorAll('#registrationBtn').forEach(link => {
     link.addEventListener('click', function(event) {
         const href = this.getAttribute('href');
         if (href.startsWith("#")) {
@@ -31,6 +31,12 @@ document.querySelectorAll(':not(.carousel) > a').forEach(link => {
                 smoothScroll(target, 1000);  // 1000ms = 1 second duration
             }
         }
+    });
+});
+
+document.querySelectorAll("footer a").forEach(function(link) {
+    link.addEventListener("mousedown", function() {
+        this.blur();
     });
 });
 

@@ -3,6 +3,12 @@
 ================================================ */
 :root {
     --scale-factor: 0.7;
+    --primary-color: #0095FF;
+    --secondary-color: #FFDF70;
+    --dark-accent: #004F88;
+    --text-color: #333;
+    --gray-text: #6F767B;
+    --light-text: #FFF;
 }
 
 body {
@@ -10,16 +16,30 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: var(--text-color)
 }
 
-.navbar, #topic {
-    background-color: #0095FF;
+a, button {
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+* {
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.container-fluid {
+    padding-right: 30px;
+    padding-left: 30px;
 }
 /* ================================================
    Navbar Styles
 ================================================ */
 
-.navbar {
+.navbar, #topic {
+    background-color: var(--primary-color);
     transition: all 0.5s;
     position: relative;
     align-items: center;
@@ -34,11 +54,7 @@ body {
     transition: all 0.3s;
 }
 
-.navbar-brand .brand-logo {
-    height: auto;
-}
-
-.navbar-image .nav-graphic {
+.navbar-brand .brand-logo,.navbar-image .nav-graphic   {
     height: auto;
 }
 
@@ -46,9 +62,8 @@ body {
    Topic Section Styles
 ================================================ */
 
-
 #topic h2, #topic h1,#registrationBtn {
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 #topic h1:hover, #topic h2:hover, #registrationBtn:hover {
@@ -56,8 +71,6 @@ body {
 }
 
 .topic-image-center {
-    width: 70%;
-    display: block;
     margin: 0 auto;
     transform: translateY(-50px);
 }
@@ -65,16 +78,18 @@ body {
 
 .text-content {
     text-align: left;
-    transform: translateY(-100px);
+    transform: translateY(-50px);
 }
 
 .headline-primary {
     font-size: 2.5em;
+    color: var(--light-text);
 }
 
 .headline-secondary {
     margin-bottom: 0.7em ;
     font-size: 1.5em;
+    color: var(--secondary-color);
 }
 
 #topic.event-details {
@@ -83,7 +98,7 @@ body {
 
 .custom-graphic {
     position: absolute;
-    bottom: -1.00em;
+    bottom: -2.0em;
     right: 5.25em;
     width: calc(13.375em * var(--scale-factor));
     height: calc(13.375em * var(--scale-factor));
@@ -105,27 +120,23 @@ body {
     width: calc(9.1875em * var(--scale-factor));
     height: calc(5.5em * var(--scale-factor));
 }
-
-.custom-graphic {
-    width: calc(13.375em * var(--scale-factor));
-    height: calc(13.375em * var(--scale-factor));
-}
-
 #registrationBtn{
     font-weight: 400;
-    color: #0095FF;
+    color: var(--primary-color);
 }
 
-.event-info {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -48px;
-    background-color:#004F88;
+
+/* ================================================
+   Event Section Styles
+================================================ */
+.event {
+    background-color:var(--dark-accent);
     padding: 15px 0;
-
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: var(--light-text);
 }
-
 
 /* ================================================
    Speaker Section Styles
@@ -135,23 +146,29 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
+.titles-second, .author {
+    color: var(--gray-text);
+    font-family: 'Lato', sans-serif;
+}
+
 .titles-second {
-    color: #6F767B;
     font-size: 27px;
     line-height: 33px;
     letter-spacing: 0.1px;
 }
 .title-primary {
-    color: #0095FF;
-
+    color: var(--primary-color);;
     font-size: 51px;
-    line-height: 57px; /* 111.765% */
+    line-height: 57px;
     letter-spacing: 0.2px;
 }
+
 .author{
     font-size: 18px;
 }
+
 .speaker-card {
     display: flex;
     flex-direction: column;
@@ -182,13 +199,13 @@ body {
     background-color: rgba(255, 148, 22, 0.20);
 }
 
-#registration .text-title{
-    color: #0095FF;
-    /*font-family: Roboto, serif;*/
+#registration .text-title {
+    color: var(--primary-color);
+    font-family: Roboto, serif;
     font-weight: 400
 }
 #registration .text-registration {
-    color: #6F767B;
+    color: var(--gray-text);
     letter-spacing: 0.2px;
     font-weight: 400;
     font-size: 20px;
@@ -210,7 +227,6 @@ form input:focus, form select:focus {
     background-color: #38A3F1;
     color: white;
     font-size: 20px;
-    /*font-family: 'Lato', sans-serif;*/
     font-weight: 600;
     padding: 10px 60px;
     border-radius: 35px;
@@ -260,17 +276,30 @@ form .btn:hover {
 /* ================================================
    Slider Section Styles
 ================================================ */
+/*#slider .container {*/
+/*    padding-left: 0;*/
+/*    padding-right: 0;*/
+/*}*/
+
+#slider .container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-inner, .carousel-item img {
+    max-height: 600px;
+}
 
 .carousel-inner {
-    max-height: 600px;
     overflow: hidden;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
-    max-height: 600px;
 }
+
+
 
 /* ================================================
    Footer Styles
@@ -279,30 +308,48 @@ footer {
     background-color: #052A44;
     font-size: 14px;
     padding: 60px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 footer h5 {
-    margin-bottom: 20px; /* Adjust the spacing below the header */
-    color: #333; /* Adjust title color */
-    font-weight: 400;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 400;
 }
 
-footer li:hover {
-    text-decoration: underline;
+footer a {
+    color: inherit;
+    text-decoration:none;
 }
-footer {
-    padding: 20px 0;
-    /*font-family: 'Lato', sans-serif;*/
+footer a .underline-wrapper{
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--primary-color);
+        transition: width 1s ease;
+    }
+
+    &:hover::before,
+    &:active::before{
+        width: 100%;
+    }
+
 }
-footer a:focus, footer a:hover, footer a:active {
-    outline: none;
+footer a:hover, footer a:active, footer a:focus {
     text-decoration: none;
 }
+
 footer a:hover img, footer a:active img {
     filter: brightness(0) saturate(100%) invert(29%) sepia(75%) saturate(3818%) hue-rotate(170deg) brightness(90%) contrast(89%);
 }
-
 /* ================================================
    Miscellaneous Styles
 ================================================ */
@@ -311,11 +358,8 @@ footer a:hover img, footer a:active img {
     position: absolute;
     top: 0;
     right: 0;
-    width: auto;
+    max-width: 100%;;
     height: auto;
     z-index: 1000;
 }
-
-
-
 
