@@ -216,6 +216,10 @@ form input, form select, form .btn {
 }
 form label {
     font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 form input:focus, form select:focus {
